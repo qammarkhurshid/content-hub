@@ -1,0 +1,28 @@
+{
+  "name": "content-hub",
+  "version": "1.0.0",
+  "description": "A content management system for different social media platforms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qammarkhurshid/content-hub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qammarkhurshid/content-hub/issues"
+  },
+  "homepage": "https://github.com/qammarkhurshid/content-hub#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.4.1"
+  }
+}
