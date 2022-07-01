@@ -1,13 +1,14 @@
 module.exports = (model) => {
-  const findOne = async (model, filter = {}) => {
+  const findOne = async (filter = {}) => {
     return model.findOne(filter);
   };
 
-  const findAll = async (model, filter = {}) => {
-    return model.find(filter);
+  const findAll = async (filter = {}) => {
+    return [{ name: 'qamar' }, { name: 'qamar' }, { name: 'qamar' }, { name: 'qamar' }];
+    // return model.find(filter);
   };
 
-  const insertOne = async (model, payload = null) => {
+  const insertOne = async (payload = null) => {
     if (!payload)
       return {
         success: false,
@@ -17,7 +18,7 @@ module.exports = (model) => {
     return model.create(payload);
   };
 
-  const bulkInsert = async (model, payload = []) => {
+  const bulkInsert = async (payload = []) => {
     if (!payload.length) {
       return {
         success: false,
@@ -28,17 +29,17 @@ module.exports = (model) => {
     return model.insertMany(payload);
   };
 
-  const updateOne = async (model, filter = {}, payload = null) => {
+  const updateOne = async (filter = {}, payload = null) => {
     if (!payload) return;
     return model.update(filter, payload);
   };
 
-  const bulkUpdate = async (model, filter = {}, payload = null) => {
+  const bulkUpdate = async (filter = {}, payload = null) => {
     if (!payload) return;
     return model.updateMany(filter, payload);
   };
 
-  const softDelete = async (model, filter = {}) => {
+  const softDelete = async (filter = {}) => {
     return model.updateMany(filter, { deleted: true });
   };
 

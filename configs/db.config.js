@@ -1,4 +1,4 @@
-const UserModel = require('../services/user.service/user.model');
+const UserModel = require('../services/user/user.model');
 async function initDb(orm, opts) {
   const { name } = opts;
   const { HOST, PORT, DB_NAME } = process.env;
@@ -31,5 +31,5 @@ async function connectToMongoDb(orm, connectionParams) {
 
 module.exports = {
   initDb,
-  userRepository: require('../services/user.service/user.repo')(UserModel),
+  userRepository: require('../services/user/user.repo')(UserModel),
 };
