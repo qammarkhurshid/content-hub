@@ -9,5 +9,13 @@ module.exports = (services) => {
         }
     };
 
-    return {findAllUsers};
+    const registerUser = async (userInfo = {}) => {
+        /* For development purposes create users which are verified */
+        userInfo.verified = true;
+        const user        = await services.userRepository.insertOne(userInfo);
+
+        return user;
+    };
+
+    return {findAllUsers, registerUser};
 };
