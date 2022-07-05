@@ -1,3 +1,4 @@
 module.exports = (services, app) => {
-    require('./routers/v1/user')(services, app);
+    require('./routes/v1/userRoutes')(services, app);
+    require('./routes/v1/companyRoutes')(services, app);
 };
